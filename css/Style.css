@@ -66,4 +66,31 @@
         color: #555;
     }
 
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px;
+}
+
+    .skills-list li {
+        margin-bottom: 20px;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+
+    .skills-list h3 {
+        margin: 0 0 10px;
+        font-size: 1.2em;
+        color: #333;
+    }
+
+    .skills-list p {
+        margin: 0;
+        color: #555;
+        font-size: 1rem;
+    }
+
+
 

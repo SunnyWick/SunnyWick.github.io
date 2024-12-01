@@ -1,0 +1,10 @@
+﻿.container {
+    text-align: center;
+    padding: 50px;
+}
+
+.profile-pic {
+    max-width: 150px;
+    border-radius: 50%;
+    margin: 20px 0;
+}

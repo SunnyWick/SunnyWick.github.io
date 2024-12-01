@@ -92,5 +92,31 @@
         font-size: 1rem;
     }
 
+.employment-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px;
+}
+
+    .employment-list li {
+        margin-bottom: 20px;
+        padding: 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+    }
+
+    .employment-list h3 {
+        margin: 0 0 10px;
+        font-size: 1.2em;
+        color: #333;
+    }
+
+    .employment-list p {
+        margin: 5px 0;
+        color: #555;
+        font-size: 1rem;
+    }
+
 
 

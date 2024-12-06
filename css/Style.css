@@ -45,6 +45,33 @@
     margin: 20px 0;
 }
 
+/* Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the screen without distortion */
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    white-space: nowrap; /* Prevents automatic line breaks */
+}
+
 /*This is for the projects page*/
 
 .projects-list {
@@ -72,6 +99,7 @@
         color: #555;
     }
 
+/*This is for the skills page*/
 .skills-list {
     list-style-type: none;
     padding: 0;
@@ -98,6 +126,8 @@
         font-size: 1rem;
     }
 
+
+/*This is for the employment page*/
 .employment-list {
     list-style-type: none;
     padding: 0;

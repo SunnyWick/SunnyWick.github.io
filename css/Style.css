@@ -32,7 +32,6 @@
         transition: background-color 0.3s ease; /* Smooth hover effect */
     }
 
-
 /*This is for the home page*/
 .container {
     text-align: center;
@@ -51,12 +50,14 @@
     width: 100%;
     height: 100vh; /* Full viewport height */
     overflow: hidden;
+    padding-top: 60px; /* Push the content down to account for the navbar */
 }
 
 .hero-image {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Ensures the image covers the screen without distortion */
+    margin-top: -60px; /* Pulls the image up to align with the navbar */
 }
 
 .hero-text {
@@ -70,6 +71,49 @@
     font-size: 2.5rem;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
     white-space: nowrap; /* Prevents automatic line breaks */
+}
+
+/* Virtual Block Styling */
+.virtual-block {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Same height as the hero section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5; /* Light grey background for simplicity */
+    text-align: center;
+    font-family: 'Georgia', serif;
+    color: #333;
+    overflow: hidden;
+}
+
+    .virtual-block p {
+        font-size: 1.5rem; /* Adjust text size */
+        line-height: 1.8;
+        margin: 0 20px;
+    }
+
+    .virtual-block a {
+        color: #007bff; /* Highlighted link color */
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+
+        .virtual-block a:hover {
+            color: #0056b3; /* Slightly darker on hover */
+        }
+
+/* Fade Effect */
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease-in;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
 }
 
 /*This is for the projects page*/

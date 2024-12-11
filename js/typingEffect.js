@@ -25,3 +25,38 @@ document.addEventListener("DOMContentLoaded", () => {
 
     typeEffect();
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const messages = [
+        'You can <a href="about.html">learn more about me</a> in this website.',
+        'Since I am a Management Information System student, you can also find my <a href="projects.html">technical portfolio</a> here.',
+        'You can also review my <a href="employment.html">professional experience</a>.'
+    ];
+    const dynamicText = document.getElementById("dynamic-text");
+    let currentIndex = 0;
+
+    function updateText() {
+        // Fade out the current text
+        dynamicText.classList.remove("fade-in");
+        dynamicText.classList.add("fade-out");
+
+        setTimeout(() => {
+            // Change the text once faded out
+            dynamicText.innerHTML = messages[currentIndex];
+            currentIndex = (currentIndex + 1) % messages.length;
+
+            // Fade in the new text
+            dynamicText.classList.remove("fade-out");
+            dynamicText.classList.add("fade-in");
+        }, 500); // Wait 500ms for fade-out to complete
+    }
+
+    // Initial text display
+    dynamicText.innerHTML = messages[currentIndex];
+    dynamicText.classList.add("fade-in");
+    currentIndex++;
+
+    // Update text every 5 seconds
+    setInterval(updateText, 5000);
+});
+

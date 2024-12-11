@@ -5,32 +5,52 @@
 /* General navbar styles */
 .navbar {
     background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
-    padding: 10px;
+    padding: 10px 20px; /* Add padding to provide space within the navbar */
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Space between the name and the navigation links */
+    align-items: center; /* Vertically aligns the text */
     position: fixed; /* Keeps navbar fixed at the top */
     top: 0;
     width: 100%;
     z-index: 1000;
     box-shadow: none; /* No shadow for elegance */
     backdrop-filter: blur(2px); /* Adds a subtle blur effect behind the navbar */
+    box-sizing: border-box; /* Ensures padding doesn't break layout */
 }
 
-    .navbar ul {
-        list-style: none; /* Removes default list styles */
-        margin: 0;
-        padding: 0;
-        display: flex;
-        gap: 20px; /* Adds space between links */
+.navbar-left {
+    font-family: 'Georgia', serif; /* Matches your chosen font */
+    font-size: 1.2rem; /* Adjust size as needed */
+    color: #333; /* Dark grey text */
+    white-space: nowrap; /* Prevents the name from breaking into multiple lines */
+}
+
+.navbar ul {
+    list-style: none; /* Removes default list styles */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: nowrap; /* Prevents links from wrapping to the next line */
+    gap: 15px; /* Adjusts spacing between links */
+}
+
+.navbar li {
+    flex: 0 1 auto; /* Ensures links shrink appropriately on smaller screens */
+}
+
+.navbar a {
+    color: #333; /* Dark grey text */
+    text-decoration: none; /* Removes underline from links */
+    padding: 10px 15px; /* Adds padding to clickable area */
+    border-radius: 5px; /* Rounded corners for links */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    white-space: nowrap; /* Prevents link text from breaking into multiple lines */
+}
+
+    .navbar a:hover {
+        background-color: #ddd; /* Light grey hover background */
     }
 
-    .navbar a {
-        color: #333; /* Dark grey text */
-        text-decoration: none; /* Removes underline from links */
-        padding: 10px 15px;
-        border-radius: 5px; /* Rounded corners for links */
-        transition: background-color 0.3s ease; /* Smooth hover effect */
-    }
 
 /*This is for the home page*/
 .container {

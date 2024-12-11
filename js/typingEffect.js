@@ -28,9 +28,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
     const messages = [
-        'You can <a href="about.html">learn more about me</a> in this website.',
-        'Since I am a Management Information System student, you can also find my <a href="projects.html">technical portfolio</a> here.',
-        'You can also review my <a href="employment.html">professional experience</a>.'
+        'Learn more<a href="about.html"> about me</a>.',
+        'View <a href="projects.html">technical portfolio</a>.',
+        'View <a href="employment.html">professional experience</a>.',
+        'View <a href="employment.html">Hobbies and Skills</a>.'
     ];
     const dynamicText = document.getElementById("dynamic-text");
     let currentIndex = 0;

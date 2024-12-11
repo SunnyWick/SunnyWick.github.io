@@ -2,6 +2,18 @@
     font-family: Baskerville, serif;
 }
 
+#welcome-message {
+    font-family: Baskerville, serif; /* Match the body font */
+    font-size: 4rem; /* Adjust size if needed */
+    color: antiquewhite; /* Match your overall color scheme */
+}
+
+#dynamic-text {
+    font-family: Baskerville, serif; 
+    font-size: 2rem; 
+    color: #333; 
+}
+
 /* General navbar styles */
 .navbar {
     background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */

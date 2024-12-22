@@ -27,37 +27,60 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    const messages = [
-        'Learn more<a href="about.html"> about me</a>.',
-        'View <a href="projects.html">technical portfolio</a>.',
-        'View <a href="employment.html">professional experience</a>.',
-        'View <a href="employment.html">Hobbies and Skills</a>.'
+    const slides = [
+        {
+            text: 'Learn more <a href="about.html">about me</a>.',
+            image: 'images/AboutMe.jpeg'
+        },
+        {
+            text: 'View <a href="projects.html">technical portfolio</a>.',
+            image: 'images/TechnicalPortfolio.jpeg'
+        },
+        {
+            text: 'Review <a href="employment.html">professional experience</a>.',
+            image: 'images/ProfessionalExperience.jpeg'
+        },
+        {
+            text: 'Explore <a href="skills.html">hobbies and skills</a>.',
+            image: 'images/HobbiesAndSkills.jpeg'
+        }
     ];
+
     const dynamicText = document.getElementById("dynamic-text");
+    const virtualBlock = document.querySelector(".virtual-block");
     let currentIndex = 0;
 
-    function updateText() {
-        // Fade out the current text
+    function updateSlide() {
+        // Fade out the current text and background
         dynamicText.classList.remove("fade-in");
         dynamicText.classList.add("fade-out");
+        virtualBlock.classList.add("fade-out");
 
         setTimeout(() => {
-            // Change the text once faded out
-            dynamicText.innerHTML = messages[currentIndex];
-            currentIndex = (currentIndex + 1) % messages.length;
+            // Update text and background image
+            dynamicText.innerHTML = slides[currentIndex].text;
+            virtualBlock.style.backgroundImage = `url('${slides[currentIndex].image}')`;
 
-            // Fade in the new text
+            // Increment index or loop back
+            currentIndex = (currentIndex + 1) % slides.length;
+
+            // Fade in the new text and background
             dynamicText.classList.remove("fade-out");
             dynamicText.classList.add("fade-in");
-        }, 500); // Wait 500ms for fade-out to complete
+            virtualBlock.classList.remove("fade-out");
+            virtualBlock.classList.add("fade-in");
+        }, 1500); // Wait 500ms for fade-out to complete
     }
 
-    // Initial text display
-    dynamicText.innerHTML = messages[currentIndex];
+    // Initial text and background image
+    dynamicText.innerHTML = slides[currentIndex].text;
+    virtualBlock.style.backgroundImage = `url('${slides[currentIndex].image}')`;
     dynamicText.classList.add("fade-in");
+    virtualBlock.classList.add("fade-in");
     currentIndex++;
 
-    // Update text every 5 seconds
-    setInterval(updateText, 5000);
+    // Update slide every 5 seconds
+    setInterval(updateSlide, 5000);
 });
+
 

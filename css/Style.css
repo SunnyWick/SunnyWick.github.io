@@ -243,9 +243,6 @@
         max-width: 80%; /* Limits the width of text for better readability */
     }
 
-/*This is for the projects page*/
-
-
 .projects {
     position: relative;
     width: 100%;
@@ -268,11 +265,26 @@
     text-align: center;
     color: white;
     font-family: Baskerville, serif;
-    font-size: 2.5rem;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-    white-space: nowrap; /* Prevents automatic line breaks */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Subtle shadow for visibility */
+    font-size: 3rem;
 }
 
+    .project-text h1 {
+        font-size: 3rem; /* Larger size for "Projects" */
+        margin: 0;
+    }
+
+    .project-text h2 {
+        font-size: 1.5rem; /* Smaller size for "Click to expand" */
+        margin: 0;
+        margin-top: 10px; /* Add spacing between the two lines */
+        color: #ddd;
+    }
+
+/* Add spacing between the image and the list */
+.projects {
+    margin-bottom: 20px; /* Adjust based on your preference */
+}
 
 .projects-list {
     list-style-type: none;
@@ -280,52 +292,55 @@
     margin: 0;
 }
 
-    .projects-list li {
-        margin-bottom: 20px;
-        padding: 15px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        background-color: #f9f9f9;
-    }
-
-    .projects-list h3 {
-        margin: 0 0 10px;
-        font-size: 1.2em;
-        color: #333;
-    }
-
-    .projects-list p {
-        margin: 0;
-        color: #555;
-    }
-
-/*This is for the skills page*/
-.skills-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 20px;
+.project-item {
+    cursor: pointer; /* Indicates clickability */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 5px; /* Slightly rounded corners for elegance */
+    padding: 15px; /* Padding for spacing within the box */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-bottom: 20px;
 }
 
-    .skills-list li {
-        margin-bottom: 20px;
-        padding: 15px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        background-color: #f9f9f9;
+    .project-item:hover {
+        background-color: #ddd; /* Slightly darker background on hover */
     }
 
-    .skills-list h3 {
-        margin: 0 0 10px;
-        font-size: 1.2em;
-        color: #333;
-    }
+.project-details {
+    display: none; /* Hidden by default */
+    margin-top: 10px;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: Baskerville, serif;
+}
 
-    .skills-list p {
-        margin: 0;
-        color: #555;
-        font-size: 1rem;
-    }
+.project-item.expanded .project-details {
+    display: block; /* Show details when expanded */
+}
 
+.project-title {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    color: #333;
+    font-family: Baskerville, serif;
+}
+
+.project-summary {
+    margin: 0 0 10px;
+    font-size: 1rem;
+    color: #333;
+    font-family: Baskerville, serif;
+}
+
+.project-details {
+    display: none;
+    margin-top: 10px;
+    color: #333;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: Baskerville, serif;
+}
 
 /*This is for the employment page*/
 .employment-list {

@@ -21,36 +21,153 @@
     </nav>
     <div class="projects">
         <img src="images/TechnicalPortfolio.jpeg" alt="Project Picture" class="project-image">
-        <div class="prject-text">
-            <h1 id="welcome-message">Projects</h1>
+        <div class="project-text">
+            <h1 id="typing-text"></h1>
+            <h2 id="typing-subtext"></h2> <!-- Separate line for "Click to expand" -->
         </div>
     </div>
-    <p>Here are some of the academic and professional projects I have worked on recently:</p>
-
+    <script src="js/typingEffect.js"></script>
     <ul class="projects-list">
-        <li>
-            <h3>MIT 5970 Business Process Automation Project for OU Bookstore</h3>
-            <p>
-                <strong>January 2024 to May 2024</strong><br>
-                Developed a UiPath bot with a team of five to web scrape the most requested genre of books weekly, determined by a Power Automate flow for survey distribution.
-            </p>
+        <!-- First Project -->
+        <li class="project-item">
+            <h3 class="project-title">Database Implementation Project for La Cocina de la Abuela Food Truck</h3>
+            <p class="project-summary">
+                <strong>January 2024 to May 2024</strong><br><br>
+                This project was part of the <strong>MIS 3353 - Databases</strong> course. The scope of the project was to provide students with hands-on experience in implementing a database for a client within a group setting. Our hypothetical client, La Cocina de la Abuela Food Truck, specializes in Mexican cuisine and is owned by "Sofia Martinez." We used the tools <strong>LucidCharts</strong> and <strong>Microsoft SQL Server.</strong>
+</p>
+            <div class="project-details">
+                <p>
+                    I was part of a group of four students tasked with designing and implementing a database tailored to the client’s business needs. The project was divided into three phases, each marked by specific milestones. Our team successfully completed the following for each milestone:
+                </p>
+                <p><strong>Milestone 1: Conceptual Design</strong></p>
+                <ul>
+                    <li>Conducted an interview with "Sofia Martinez" to understand the client’s requirements.</li>
+                    <li>Created an Entity-Relationship Diagram (ERD) using Lucidcharts to model the business processes.</li>
+                </ul>
+                <p><strong>Milestone 2: Logical Design</strong></p>
+                <ul>
+                    <li>Normalized the client-provided data to minimize redundancy, improve data integrity, and enhance database efficiency.</li>
+                </ul>
+                <p><strong>Milestone 3: Physical Design and Implementation</strong></p>
+                <ul>
+                    <li>Implemented the database using Microsoft SQL Server.</li>
+                    <li>Delivered a comprehensive project report documenting the database design, implementation, and testing processes.</li>
+                </ul>
+            </div>
         </li>
-        <li>
-            <h3>MIS 3383 Integrated Business Process in SAP S/4HANA</h3>
-            <p>
-                <strong>January 2024 to May 2024</strong><br>
-                Completed case studies covering various business processes, such as Material Management, within SAP S/4HANA.
-            </p>
+        <!-- Second Project -->
+        <li class="project-item">
+            <h3 class="project-title">RPA Bot for Web Scraping</h3>
+            <p class="project-summary">
+                <strong>January 2024 to May 2024</strong><br><br>
+                This project was part of <strong>MIT 5970 - Business Process Automation & AI</strong>, where our team of five developed a Robotic Process Automation (RPA) bot using <strong>UiPath</strong> to scrape the web and identify the most popular books across different genres.
+</p>
+            <div class="project-details">
+                <p>
+                    The project was framed within the context of inventory management for the OU Bookstore, as identifying and stocking the most popular books of the month could theoretically boost sales.
+                </p>
+                <p>
+                    Our team began by identifying the best source for this information, which turned out to be Amazon.com. Amazon’s "Best Books of the Month" page categorizes books by different genres, making it an ideal resource. After selecting this platform as our primary data source, we created an Excel workbook to store the web scraping results (i.e., the books’ information).
+                </p>
+                <p>
+                    With both the input (genre selection) and output (Excel workbook) prepared, we developed the bot in UiPath. The bot was designed to prompt the user to select one or all of the available book categories or genres upon execution. It then retrieves data on the most popular books for the selected category. If the data for the month had not already been scraped, the bot scrapes the website and concludes by opening the updated Excel file containing the results. If the data had already been scraped, the bot displays a message box stating that the data for the selected category and month is already available and then opens the Excel file.
+                </p>
+            </div>
         </li>
-        <li>
-            <h3>MIS 3353 Database Implementation Project for La Cocina de la Abuela Food Truck</h3>
-            <p>
-                <strong>January 2024 to May 2024</strong><br>
-                Designed and implemented a database on Microsoft SQL Server with a team of four students and delivered a comprehensive project report.
+        <!-- Third Project -->
+        <li class="project-item">
+            <h3 class="project-title">ETL Process</h3>
+            <p class="project-summary">
+                <strong>November 2024 to December 2024</strong><br><br>
+                This project was part of <strong>MIT 5772 - Principles of Data Warehousing</strong>. The objective was to apply a complete ETL (Extract, Transform, Load) process to raw data provided in customer and item Excel workbooks. Our team of four utilized <strong>pgAdmin 4</strong> as the data warehouse platform and <strong>Pentaho</strong> for creating transformations and jobs to automate the ETL process.
             </p>
+            <div class="project-details">
+                <p><strong>Workflow Overview</strong></p>
+                <p><strong>Table Creation:</strong></p>
+                <ul>
+                    <li>Created tables using SQL scripts in the Public, Staging, and Core layers of our database in pgAdmin 4.</li>
+                    <li>The Core layer tables were designed to accommodate necessary transformations, such as adding surrogate keys for the customer and item tables, and splitting the full_name column in the customer table into first_name and last_name.</li>
+                </ul>
+                <p><strong>Data Upload:</strong></p>
+                <ul>
+                    <li>Raw data was imported into the Public layer.</li>
+                    <li>Data was connected to the Staging layer for cleaning and transformations.</li>
+                </ul>
+                <p><strong>Transformations and Initial Load:</strong></p>
+                <ul>
+                    <li>Using Pentaho, we created transformations to automate tasks like splitting the full_name field into first_name and last_name and removing leading spaces in the item_category field.</li>
+                    <li>After running the initial load, the cleaned data was verified in the Staging layer, ready for further use.</li>
+                </ul>
+                <p><strong>Delta Load Implementation:</strong></p>
+                <ul>
+                    <li>Created two Pentaho jobs for each data source (Customer and Item tables) to handle Delta Loads (incremental updates).</li>
+                    <li>The jobs fetched only new records from the Public layer, applied necessary transformations, and loaded the updated data into the Core layer.</li>
+                    <li>Delta loads were tested by adding new rows in the Public layer using SQL scripts and verifying the process in Pentaho.</li>
+                </ul>
+            </div>
+        </li>
+        <!-- Fourth Project -->
+        <li class="project-item">
+            <h3 class="project-title">Olympic Payouts and Incentives Analysis Using Python</h3>
+            <p class="project-summary">
+                <strong>November 2024 – December 2024</strong><br><br>
+                This project was part of <strong>MIT 5032 – Analytics Programming (Python I)</strong>, where our team of seven analyzed the relationship between Olympic medal payouts and medal performance using Python on <strong>jupyter Notebook</strong>. The objective was to determine whether higher payouts incentivize better medal performance and increased athlete participation. We used the python libraries <strong>pandas</strong>, <strong>SciPy</strong>, and <strong>Matplotlib</strong> to accomplish this.
+            </p>
+            <div class="project-details">
+                <p>
+                    We obtained our primary dataset from Kaggle, which included over 20 spreadsheets. However, only 4-5 spreadsheets were relevant to our analysis. To supplement this data, we conducted manual research to gather information on silver and bronze medal payouts, as the dataset primarily focused on gold medal payouts. Once all data was consolidated, we used Python to clean and transform the datasets, addressing missing values and ensuring consistency for analysis.
+                </p>
+                <p>
+                    Using pandas, we created structured DataFrames to analyze medal counts and payouts. Statistical tests were conducted with SciPy to assess the relationship between payouts and performance. Specifically:
+                </p>
+                <ul>
+                    <li><strong>Payouts vs. Medals:</strong> We hypothesized that countries offering higher payouts would achieve higher medal counts. The analysis revealed a weak correlation, with an R-squared value below 0.50, indicating that payouts are not the primary determinant of medal performance.</li>
+                    <li><strong>Payouts vs. Athlete Participation:</strong> Similarly, no significant relationship was found between payouts and athlete participation, as countries like Germany and Australia had high athlete counts despite offering lower payouts.</li>
+                </ul>
+                <p>
+                    Using Matplotlib, we created scatter plots and bar charts to illustrate trends. Key insights include:
+                </p>
+                <ul>
+                    <li>The USA leads in total medal counts (126) but offers moderate payouts, demonstrating high efficiency.</li>
+                    <li>Italy offers the highest payouts but does not rank among the top countries in medal counts, indicating diminishing returns on higher payouts.</li>
+                    <li>Countries with high medals and low payouts (e.g., the USA) were identified as the most productive, while those with high payouts and low medals (e.g., Italy) were the least efficient.</li>
+                </ul>
+                <p>
+                    Our findings suggest that while payouts may have some influence on medal performance and participation, they are not the primary factors. Variables like sports infrastructure, policies, and cultural emphasis likely play a more significant role.
+                </p>
+            </div>
+        </li>
+        <!-- Fifth Project -->
+        <li class="project-item">
+            <h3 class="project-title">Analysis of Factors Affecting Student Performance</h3>
+            <p class="project-summary">
+                <strong>November 2024 – December 2024</strong><br><br>
+                This project was part of <strong>MIT 5742 – Data Science and Analytics</strong>, where our team of seven analyzed the factors influencing student performance in Mathematics and Portuguese classes at two Portuguese secondary schools. Using <strong>polynomial regression</strong>, <strong>decision tree analysis</strong>, and <strong>correlation analysis</strong>, we aimed to identify the social, familial, and behavioral factors affecting academic outcomes.
+            </p>
+            <div class="project-details">
+                <p>
+                    The dataset, sourced from the UC Irvine Machine Learning Repository, was collected by Paolo Cortez and A. M. G. Silva through school reports and questionnaires. It contained information on 396 students for Mathematics and 650 students for Portuguese, with approximately 30 variables per student. These variables spanned demographic details, family background, school-related factors, and grades. We categorized them into three groups for analysis:
+                </p>
+                <ul>
+                    <li><strong>Parental Involvement:</strong> Parents’ education level, job type, family support, and family relationship quality.</li>
+                    <li><strong>Social Factors:</strong> Absences, travel time, address type (urban/rural), and social activity frequency.</li>
+                    <li><strong>Behavioral and Lifestyle Factors:</strong> Alcohol intake, health status, romantic relationships, and extracurricular involvement.</li>
+                </ul>
+                <p>
+                    We used polynomial regression models to explore relationships between these factors and students' final grades. Mean Squared Error (MSE) and R-squared (R²) were used to evaluate the models' performance, and confusion matrices were used to assess accuracy, precision, recall, and specificity. Additionally, correlation analysis helped quantify the strength and direction of relationships between variables, while decision tree analysis identified the most influential factors affecting academic outcomes. Separate analyses were conducted for Mathematics and Portuguese due to the lack of a common identifier to merge datasets.
+                </p>
+                <p>
+                    For Mathematics, parental education had a moderate effect, but social factors like absences and behavioral factors showed weak correlations with grades. The accuracy of predictive models was low (56%-63%), with R² values indicating a poor fit.
+                </p>
+                <p>
+                    For Portuguese, parental education and family relationship quality showed stronger correlations with grades. Absences had a statistically significant but weak negative effect on grades. Accuracy for predictive models was significantly higher (78%-87%), with lower MSE values, indicating better model performance.
+                </p>
+                <p>
+                    Our analysis underscores the importance of tailoring teaching techniques to different subjects. Social support and parental involvement were critical for student success in language-based subjects like Portuguese, while these things didn’t matter as much for Mathematics.
+                </p>
+            </div>
         </li>
     </ul>
-
     <footer>
         <p>&copy; 2024 Santhush Wickramasinghe - All rights reserved.</p>
     </footer>

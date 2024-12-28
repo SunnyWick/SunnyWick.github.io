@@ -83,4 +83,46 @@ document.addEventListener("DOMContentLoaded", () => {
     setInterval(updateSlide, 5000);
 });
 
+// Project typing
+document.addEventListener("DOMContentLoaded", () => {
+    const typingElement = document.getElementById("typing-text");
+    const smallerTypingElement = document.getElementById("typing-subtext"); // For "Click to expand"
+    let projectCharIndex = 0;
+    let subtextCharIndex = 0;
+
+    function typeProjectEffect() {
+        const projectMessage = "Projects";
+        const subtextMessage = "Click on a project to expand";
+
+        if (projectCharIndex < projectMessage.length) {
+            // Type the "Projects" message
+            typingElement.innerHTML += projectMessage.charAt(projectCharIndex);
+            projectCharIndex++;
+            setTimeout(typeProjectEffect, 100); // Adjust typing speed
+        } else if (subtextCharIndex < subtextMessage.length) {
+            // Type the "Click to expand" message on a new line
+            smallerTypingElement.innerHTML += subtextMessage.charAt(subtextCharIndex);
+            subtextCharIndex++;
+            setTimeout(typeProjectEffect, 100); // Adjust typing speed
+        }
+    }
+
+    // Start typing effect
+    typeProjectEffect();
+});
+
+
+//projects button
+document.addEventListener("DOMContentLoaded", () => {
+    const projectItems = document.querySelectorAll(".project-item");
+
+    projectItems.forEach((item) => {
+        item.addEventListener("click", () => {
+            item.classList.toggle("expanded");
+        });
+    });
+});
+
+
+
 

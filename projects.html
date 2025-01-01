@@ -31,53 +31,6 @@
     </div>
     <script src="js/typingEffect.js"></script>
     <ul class="projects-list">
-        <!-- First Project -->
-        <li class="project-item">
-            <h3 class="project-title">Database Implementation Project for La Cocina de la Abuela Food Truck</h3>
-            <p class="project-summary">
-                <strong>January 2024 to May 2024</strong><br><br>
-                This project was part of the <strong>MIS 3353 - Databases</strong> course. The scope of the project was to provide students with hands-on experience in implementing a database for a client within a group setting. Our hypothetical client, La Cocina de la Abuela Food Truck, specializes in Mexican cuisine and is owned by "Sofia Martinez." We used the tools <strong>LucidCharts</strong> and <strong>Microsoft SQL Server.</strong>
-            </p>
-            <div class="project-details">
-                <p>
-                    I was part of a group of four students tasked with designing and implementing a database tailored to the client’s business needs. The project was divided into three phases, each marked by specific milestones. Our team successfully completed the following for each milestone:
-                </p>
-                <p><strong>Milestone 1: Conceptual Design</strong></p>
-                <ul>
-                    <li>Conducted an interview with "Sofia Martinez" to understand the client’s requirements.</li>
-                    <li>Created an Entity-Relationship Diagram (ERD) using Lucidcharts to model the business processes.</li>
-                </ul>
-                <p><strong>Milestone 2: Logical Design</strong></p>
-                <ul>
-                    <li>Normalized the client-provided data to minimize redundancy, improve data integrity, and enhance database efficiency.</li>
-                </ul>
-                <p><strong>Milestone 3: Physical Design and Implementation</strong></p>
-                <ul>
-                    <li>Implemented the database using Microsoft SQL Server.</li>
-                    <li>Delivered a comprehensive project report documenting the database design, implementation, and testing processes.</li>
-                </ul>
-            </div>
-        </li>
-        <!-- Second Project -->
-        <li class="project-item">
-            <h3 class="project-title">RPA Bot for Web Scraping</h3>
-            <p class="project-summary">
-                <strong>January 2024 to May 2024</strong><br><br>
-                This project was part of <strong>MIT 5970 - Business Process Automation & AI</strong>, where our team of five developed a Robotic Process Automation (RPA) bot using <strong>UiPath</strong> to scrape the web and identify the most popular books across different genres.
-            </p>
-            <div class="project-details">
-                <p>
-                    The project was framed within the context of inventory management for the OU Bookstore, as identifying and stocking the most popular books of the month could theoretically boost sales.
-                </p>
-                <p>
-                    Our team began by identifying the best source for this information, which turned out to be Amazon.com. Amazon’s "Best Books of the Month" page categorizes books by different genres, making it an ideal resource. After selecting this platform as our primary data source, we created an Excel workbook to store the web scraping results (i.e., the books’ information).
-                </p>
-                <p>
-                    With both the input (genre selection) and output (Excel workbook) prepared, we developed the bot in UiPath. The bot was designed to prompt the user to select one or all of the available book categories or genres upon execution. It then retrieves data on the most popular books for the selected category. If the data for the month had not already been scraped, the bot scrapes the website and concludes by opening the updated Excel file containing the results. If the data had already been scraped, the bot displays a message box stating that the data for the selected category and month is already available and then opens the Excel file.
-                </p>
-            </div>
-        </li>
-        <!-- Third Project -->
         <li class="project-item">
             <h3 class="project-title">ETL Process</h3>
             <p class="project-summary">
@@ -107,6 +60,10 @@
                     <li>The jobs fetched only new records from the Public layer, applied necessary transformations, and loaded the updated data into the Core layer.</li>
                     <li>Delta loads were tested by adding new rows in the Public layer using SQL scripts and verifying the process in Pentaho.</li>
                 </ul>
+                <div class="project-images">
+                    <img src="images/ETL - DB.png" alt="ETL Process - Database Design">
+                    <img src="images/ETL - Job.png" alt="ETL Process - Pentaho Job">
+                </div>
             </div>
         </li>
         <!-- Fourth Project -->
@@ -138,6 +95,10 @@
                 <p>
                     Our findings suggest that while payouts may have some influence on medal performance and participation, they are not the primary factors. Variables like sports infrastructure, policies, and cultural emphasis likely play a more significant role.
                 </p>
+                <div class="project-images">
+                    <img src="images/Python - Total medals.png" alt="Python project - Total medal count">
+                    <img src="images/Python - Chart.png" alt="Python project - Sample Chart">
+                </div>
             </div>
         </li>
         <!-- Fifth Project -->
@@ -168,6 +129,10 @@
                 <p>
                     Our analysis underscores the importance of tailoring teaching techniques to different subjects. Social support and parental involvement were critical for student success in language-based subjects like Portuguese, while these things didn’t matter as much for Mathematics.
                 </p>
+                <div class="project-images">
+                    <img src="images/Data Science - Absenteeism and Portuguese.png" alt="Data Science - Absenteeism and Portuguese">
+                    <img src="images/Data Science - Absenteeism and Portugese (Details).png" alt="Data Science - Absenteeism and Portugese, Details">
+                </div>
             </div>
         </li>
         <!-- Sixth Project -->
@@ -202,6 +167,65 @@
                         Sedans and hatchbacks were generally more affordable and more frequently listed, while SUVs and trucks were priced higher.
                     </li>
                 </ul>
+                <div class="project-images">
+                    <img src="images/AWS project - Odometer.png" alt="AWS project - Odometer readings of listings">
+                    <img src="images/AWS project - Condition.png" alt="AWS project - Condition of all listings">
+                </div>
+            </div>
+        </li>
+        <!-- First Project -->
+        <li class="project-item">
+            <h3 class="project-title">Database Implementation Project for La Cocina de la Abuela Food Truck</h3>
+            <p class="project-summary">
+                <strong>January 2024 to May 2024</strong><br><br>
+                This project was part of the <strong>MIS 3353 - Databases</strong> course. The scope of the project was to provide students with hands-on experience in implementing a database for a client within a group setting. Our hypothetical client, La Cocina de la Abuela Food Truck, specializes in Mexican cuisine and is owned by "Sofia Martinez." We used the tools <strong>LucidCharts</strong> and <strong>Microsoft SQL Server</strong>.
+            </p>
+            <div class="project-details">
+                <p>
+                    I was part of a group of four students tasked with designing and implementing a database tailored to the client’s business needs. The project was divided into three phases, each marked by specific milestones. Our team successfully completed the following for each milestone:
+                </p>
+                <p><strong>Milestone 1: Conceptual Design</strong></p>
+                <ul>
+                    <li>Conducted an interview with "Sofia Martinez" to understand the client’s requirements. Key insights, such as the need to track raw materials’ expiration dates and employee payment processes, were gathered during this meeting.</li>
+                    <li>Created an Entity-Relationship Diagram (ERD) using Lucidcharts to model the business processes. The ERD captured three key business cycles: Revenue, Expenditure, and Production.</li>
+                </ul>
+                <p><strong>Milestone 2: Logical Design</strong></p>
+                <ul>
+                    <li>Normalized the client-provided data to minimize redundancy, improve data integrity, and enhance database efficiency.</li>
+                    <li><strong>Example of normalization:</strong></li>
+                    <ul>
+                        <li><strong>Original Fields in the MenuItemsTable:</strong> ItemID, ItemName, Description, Price.</li>
+                        <li><strong>Normalized Fields:</strong> ItemID, ItemName, Price, Qty_OnHand, Qty_Committed, Qty_Available, Qty_BackOrdered, Description.</li>
+                    </ul>
+                </ul>
+                <p><strong>Milestone 3: Physical Design and Implementation</strong></p>
+                <ul>
+                    <li>Implemented the database using Microsoft SQL Server, ensuring it met the client’s operational requirements.</li>
+                    <li>Delivered a comprehensive project report documenting the database design, implementation, and testing processes.</li>
+                    <li>Completed a Project Management Document tracking time, resources, and effort expended throughout the project.</li>
+                </ul>
+            </div>
+        </li>
+        <!-- Second Project -->
+        <li class="project-item">
+            <h3 class="project-title">RPA Bot for Web Scraping</h3>
+            <p class="project-summary">
+                <strong>January 2024 to May 2024</strong><br><br>
+                This project was part of <strong>MIT 5970 - Business Process Automation & AI</strong>, where our team of five developed a Robotic Process Automation (RPA) bot using <strong>UiPath</strong> to scrape the web and identify the most popular books across different genres.
+            </p>
+            <div class="project-details">
+                <p>
+                    The project was framed within the context of inventory management for the OU Bookstore, as identifying and stocking the most popular books of the month could theoretically boost sales.
+                </p>
+                <p>
+                    Our team began by identifying the best source for this information, which turned out to be Amazon.com. Amazon’s "Best Books of the Month" page categorizes books by different genres, making it an ideal resource. After selecting this platform as our primary data source, we created an Excel workbook to store the web scraping results (i.e., the books’ information).
+                </p>
+                <p>
+                    With both the input (genre selection) and output (Excel workbook) prepared, we developed the bot in UiPath. The bot was designed to prompt the user to select one or all of the available book categories or genres upon execution. It then retrieves data on the most popular books for the selected category. If the data for the month had not already been scraped, the bot scrapes the website and concludes by opening the updated Excel file containing the results. If the data had already been scraped, the bot displays a message box stating that the data for the selected category and month is already available and then opens the Excel file.
+                </p>
+                <div class="project-images">
+                    <img src="images/Uipath Project - Bot.jpg" alt="Uipath Project - Bot code snipet">
+                </div>
             </div>
         </li>
     </ul>

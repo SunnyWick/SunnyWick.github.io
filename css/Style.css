@@ -392,6 +392,28 @@
     font-family: Baskerville, serif;
 }
 
+.project-images {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    gap: 20px; /* Space between images */
+    margin-top: 20px; /* Space above the image section */
+}
+
+    .project-images img {
+        width: 100%; /* Images will scale to fit their container */
+        max-width: 50%; /* Limits each image to half the container width */
+        height: auto; /* Maintains aspect ratio */
+        border-radius: 5px; /* Rounded corners for images */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    }
+
+/* Adjust layout for smaller screens */
+@media (max-width: 768px) {
+    .project-images img {
+        max-width: 100%; /* Each image takes full width on smaller screens */
+    }
+}
+
 /*This is for the employment page*/
 .employment {
     position: relative;

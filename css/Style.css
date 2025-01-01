@@ -16,52 +16,85 @@
 
 /* General navbar styles */
 .navbar {
-    background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
-    padding: 10px 20px; /* Add padding to provide space within the navbar */
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px 20px;
     display: flex;
-    justify-content: space-between; /* Space between the name and the navigation links */
-    align-items: center; /* Vertically aligns the text */
-    position: fixed; /* Keeps navbar fixed at the top */
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: none; /* No shadow for elegance */
-    backdrop-filter: blur(2px); /* Adds a subtle blur effect behind the navbar */
-    box-sizing: border-box; /* Ensures padding doesn't break layout */
+    backdrop-filter: blur(2px);
+    box-sizing: border-box;
 }
 
 .navbar-left {
     font-family: Baskerville, serif;
-    font-size: 1.2rem; /* Adjust size as needed */
-    color: #333; /* Dark grey text */
-    white-space: nowrap; /* Prevents the name from breaking into multiple lines */
+    font-size: 1.2rem;
+    color: #333;
+    white-space: nowrap;
 }
 
-.navbar ul {
-    list-style: none; /* Removes default list styles */
+/* Menu icon styles */
+.navbar-menu {
+    display: none; /* Hidden by default on larger screens */
+}
+
+.menu-icon {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* Navbar links */
+.navbar-links {
+    list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    flex-wrap: nowrap; /* Prevents links from wrapping to the next line */
-    gap: 15px; /* Adjusts spacing between links */
+    gap: 15px;
 }
 
-.navbar li {
-    flex: 0 1 auto; /* Ensures links shrink appropriately on smaller screens */
-}
+    .navbar-links li {
+        flex: 0 1 auto;
+    }
 
 .navbar a {
-    color: #333; /* Dark grey text */
-    text-decoration: none; /* Removes underline from links */
-    padding: 10px 15px; /* Adds padding to clickable area */
-    border-radius: 5px; /* Rounded corners for links */
-    transition: background-color 0.3s ease; /* Smooth hover effect */
-    white-space: nowrap; /* Prevents link text from breaking into multiple lines */
+    color: #333;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
 }
 
     .navbar a:hover {
-        background-color: #ddd; /* Light grey hover background */
+        background-color: #ddd;
     }
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: block; /* Show menu icon on smaller screens */
+    }
+
+    .navbar-links {
+        display: none; /* Hidden by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+        .navbar-links.show {
+            display: flex; /* Show links when the menu is expanded */
+        }
+}
 
 
 /*This is for the home page*/
@@ -200,48 +233,65 @@
 
 .About-text {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 0; /* Aligns the text block with the top of the image */
+    left: 0; /* Aligns the text block with the left edge of the image */
+    width: 100%; /* Makes the text block span the full width of the image */
+    height: 100%; /* Makes the text block span the full height of the image */
     text-align: center;
     color: white;
     font-family: Baskerville, serif;
-    font-size: 1.5rem; /* Adjusted size for better readability */
+    font-size: 1.5rem; /* Default font size for larger screens */
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-    padding: 20px; /* Adds padding inside the text block */
-    background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent black background for readability */
-    border-radius: 8px; /* Smoothens the corners of the text block */
-    width: 100%; /* Ensures the text box spans the full width of the section */
-    height: 100%; /* Ensures the text box spans the full height of the section */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Slightly transparent background for readability */
     display: flex;
     flex-direction: column;
     justify-content: center; /* Vertically centers the text */
     align-items: center; /* Horizontally centers the text */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for the text block */
+    box-sizing: border-box; /* Ensures padding doesn't exceed container dimensions */
 }
 
-    /* Ensure About-text links are white */
     .About-text a {
-        color: white; /* White color for links */
-        text-decoration: underline; /* Optional: Keeps the underline for emphasis */
-        font-weight: bold; /* Optional: Makes the text stand out */
-        transition: color 0.3s ease; /* Smooth color transition for hover */
+        color: white;
+        text-decoration: underline;
+        font-weight: bold;
+        transition: color 0.3s ease;
     }
 
         .About-text a:hover {
-            color: #ffcc00; /* Highlighted color on hover */
+            color: #ffcc00;
         }
 
     .About-text h1 {
         margin-bottom: 20px;
-        font-size: 2.5rem;
+        font-size: 2.5rem; /* Larger heading size for better visibility */
     }
 
     .About-text p {
         line-height: 1.8; /* Improves text readability */
         margin-bottom: 10px;
-        max-width: 80%; /* Limits the width of text for better readability */
+        max-width: 80%; /* Limits the width of the text for better readability */
     }
+
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+    .About-text {
+        font-size: 1rem; /* Adjust font size for smaller screens */
+        padding: 15px; /* Reduce padding for better scaling */
+    }
+
+        .About-text h1 {
+            font-size: 1.5rem; /* Smaller heading size */
+            margin-bottom: 15px;
+        }
+
+        .About-text p {
+            font-size: 0.9rem; /* Reduce paragraph font size for readability */
+            line-height: 1.6; /* Adjust line spacing */
+        }
+}
+
+/* Project page */
 
 .projects {
     position: relative;
@@ -398,9 +448,9 @@
     }
 
 footer {
-    background-color: #333; /* Dark background for contrast */
-    color: white; /* Text color for visibility */
-    padding: 10px 20px; /* Same padding as the navbar */
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    padding: 10px 20px; 
     display: flex;
     justify-content: space-between;
     align-items: center;

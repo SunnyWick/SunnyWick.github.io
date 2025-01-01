@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const message = ["Hello!", "Welcome to Sunny's Website"];
+    const message = ["Hello!", "Welcome"];
     const welcomeMessage = document.getElementById("welcome-message");
-    let part1 = message[0]; // "Hello!"
-    let part2 = message[1]; // "Welcome to Sunny's Website"
+    let part1 = message[0]; 
+    let part2 = message[1]; 
     let charIndex1 = 0;
     let charIndex2 = 0;
 
@@ -120,6 +120,17 @@ document.addEventListener("DOMContentLoaded", () => {
         item.addEventListener("click", () => {
             item.classList.toggle("expanded");
         });
+    });
+});
+
+
+// Toggle the "show" class
+document.addEventListener("DOMContentLoaded", () => {
+    const menuIcon = document.querySelector(".menu-icon");
+    const navbarLinks = document.querySelector(".navbar-links");
+
+    menuIcon.addEventListener("click", () => {
+        navbarLinks.classList.toggle("show"); // Toggle the "show" class
     });
 });
 

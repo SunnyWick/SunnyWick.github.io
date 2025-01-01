@@ -11,7 +11,10 @@
         <div class="navbar-left">
             Santhush (Sunny) Wickramasinghe
         </div>
-        <ul>
+        <div class="navbar-menu">
+            <img src="images/menu-icon.png" alt="Menu Icon" class="menu-icon" />
+        </div>
+        <ul class="navbar-links">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Me</a></li>
             <li><a href="projects.html">Technical Portfolio</a></li>
@@ -165,6 +168,40 @@
                 <p>
                     Our analysis underscores the importance of tailoring teaching techniques to different subjects. Social support and parental involvement were critical for student success in language-based subjects like Portuguese, while these things didn’t matter as much for Mathematics.
                 </p>
+            </div>
+        </li>
+        <!-- Sixth Project -->
+        <li class="project-item">
+            <h3 class="project-title">Analyzing Used Vehicle Listings Using AWS Tools</h3>
+            <p class="project-summary">
+                <strong>November 2024 – December 2024</strong><br><br>
+                This project was part of the <strong>MIT 5752 – Cloud Computing</strong> course, where our team analyzed used vehicle listings in the United States from Craigslist during a one-month period (April 4th, 2021, to May 4th, 2021). The project focused on uncovering interesting patterns in the used vehicle market using <strong>AWS tools</strong> for data storage, preparation, querying, and visualization. The tools utilized included <strong>Amazon S3</strong> for data storage, <strong>AWS Glue</strong> for data preparation and cataloging, <strong>Amazon Athena</strong> for SQL-based querying, and <strong>AWS QuickSight</strong> for creating interactive data visualizations.
+            </p>
+            <div class="project-details">
+                <p>
+                    The dataset, sourced from Kaggle, contained key attributes such as price, mileage (odometer), condition, model, and year for used vehicle listings. The data was uploaded to an Amazon S3 bucket titled “datalakeproject-afs” (named after the team’s initials) in CSV format.
+                </p>
+                <p>
+                    We utilized <strong>AWS Glue</strong> to create a crawler named "datalakeproject-afs-crawler," which cataloged the data into a structured database. Next, <strong>Amazon Athena</strong> was used to execute SQL-based queries for transforming and analyzing the data. This prepared data was visualized using <strong>AWS QuickSight</strong>, which provided insights through interactive visualizations.
+                </p>
+                <p><strong>Using AWS tools, we derived the following key insights from the dataset:</strong></p>
+                <ul>
+                    <li>
+                        Most vehicles were priced under $30,000, with luxury brands such as Porsche, Ferrari, and Tesla standing out for their higher price points.
+                    </li>
+                    <li>
+                        White, black, and silver vehicles were the most frequently listed, and cars of these colors were more expensive than others of the same make and model.
+                    </li>
+                    <li>
+                        The majority of vehicles were listed as being in “excellent” or “good” condition, with very few vehicles marked as “fair” or “poor.” Interestingly, vehicles in "good" condition were more expensive than those listed as "excellent."
+                    </li>
+                    <li>
+                        A clear negative correlation was observed between mileage and price, where vehicles with lower mileage commanded higher prices. Notably, most listed vehicles had an odometer reading of less than 50,000 miles, which was an interesting finding.
+                    </li>
+                    <li>
+                        Sedans and hatchbacks were generally more affordable and more frequently listed, while SUVs and trucks were priced higher.
+                    </li>
+                </ul>
             </div>
         </li>
     </ul>

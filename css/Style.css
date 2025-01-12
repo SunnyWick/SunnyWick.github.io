@@ -442,32 +442,112 @@
     white-space: nowrap; /* Prevents automatic line breaks */
 }
 
-
-.employment-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 20px;
+.employment-details {
+    display: none; /* Hidden by default */
+    margin-top: 10px; /* Space above the details */
+    padding-left: 0; /* Remove natural list indentation */
+    font-size: 0.9rem;
+    color: black;
 }
 
-    .employment-list li {
-        margin-bottom: 20px;
-        padding: 15px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        background-color: #f9f9f9;
+.employment-entry {
+    display: flex; /* Aligns items horizontally */
+    align-items: flex-start; /* Aligns the logo and text to the top */
+    gap: 10px; /* Space between the logo and text */
+}
+
+.employment-logo {
+    width: 150px; /* Consistent logo size */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 5px;
+}
+
+.employment-text {
+    font-family: Baskerville, serif;
+}
+
+/* General timeline container */
+.timeline {
+    margin: 20px 0;
+    padding-left: 50px;
+    position: relative;
+}
+
+    /* Vertical line */
+    .timeline::before {
+        content: "";
+        position: absolute;
+        left: 25px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background-color: #333;
     }
 
-    .employment-list h3 {
-        margin: 0 0 10px;
-        font-size: 1.2em;
-        color: #333;
+/* Timeline Group */
+.timeline-group {
+    margin-bottom: 40px;
+}
+
+/* Timeline Point (Heading with Circle) */
+.timeline-point {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.timeline-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #333;
+    margin-right: 10px;
+}
+
+.timeline-heading {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    font-family: Baskerville, serif;
+}
+
+/* Timeline Events Container */
+.timeline-events {
+    margin-left: 25px; /* Indent to align with headings */
+}
+
+/* Individual Timeline Event */
+.timeline-event {
+    margin-bottom: 20px;
+}
+
+/* Event Content */
+.timeline-content {
+    padding: 15px;
+    border-radius: 5px;
+    background-color: white;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    cursor: pointer;
+}
+
+    .timeline-content:hover {
+        background-color: #eee;
     }
 
-    .employment-list p {
-        margin: 5px 0;
-        color: #555;
+.timeline-content.expanded .employment-details {
+    display: block;
+}
+
+/* Responsive: Stack timeline groups vertically */
+@media screen and (max-width: 768px) {
+    .timeline {
+        padding-left: 30px;
+    }
+
+    .timeline-heading {
         font-size: 1rem;
     }
+}
 
 footer {
     background-color: rgba(255, 255, 255, 0.9);

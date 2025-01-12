@@ -134,6 +134,16 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+// Toggle the show for employment
+document.addEventListener("DOMContentLoaded", () => {
+    const timelineContents = document.querySelectorAll(".timeline-content");
+
+    timelineContents.forEach((content) => {
+        content.addEventListener("click", () => {
+            content.classList.toggle("expanded");
+        });
+    });
+});
 
 
 

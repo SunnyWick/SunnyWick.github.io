@@ -445,21 +445,21 @@
 .employment-details {
     display: none; /* Hidden by default */
     margin-top: 10px; /* Space above the details */
-    padding-left: 0; /* Remove natural list indentation */
     font-size: 0.9rem;
     color: black;
 }
 
 .employment-entry {
     display: flex; /* Aligns items horizontally */
-    align-items: flex-start; /* Aligns the logo and text to the top */
+    align-items: center; /* Vertically centers the logo and text */
     gap: 10px; /* Space between the logo and text */
+    margin-bottom: 20px; /* Adds spacing below each entry */
 }
 
 .employment-logo {
-    width: 150px; /* Consistent logo size */
+    width: 150px; /* Adjust as needed for uniform sizing */
     height: auto; /* Maintains aspect ratio */
-    border-radius: 5px;
+    border-radius: 5px; /* Optional: Adds slight rounding to the logo */
 }
 
 .employment-text {

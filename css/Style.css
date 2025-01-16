@@ -426,7 +426,7 @@
 .Employment-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image covers the screen without distortion */
+    object-fit: cover;
 }
 
 .Employment-text {
@@ -437,10 +437,25 @@
     text-align: center;
     color: white;
     font-family: Baskerville, serif;
-    font-size: 2.5rem;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-    white-space: nowrap; /* Prevents automatic line breaks */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Subtle shadow for visibility */
+    width: 90%; /* Adjust width for responsiveness */
+    max-width: 800px; /* Maximum width for larger screens */
+    padding: 20px; /* Add padding for better readability */
+    box-sizing: border-box; /* Include padding in width calculations */
 }
+
+    .Employment-text h1 {
+        font-size: 2.5rem; /* Adjust for better readability on smaller screens */
+        margin: 0;
+    }
+
+    .Employment-text h2 {
+        font-size: 1.2rem; /* Adjust for better readability on smaller screens */
+        margin: 0;
+        margin-top: 15px; /* Space between lines */
+        color: #ddd;
+        line-height: 1.6; /* Improve readability of longer subtext */
+    }
 
 .employment-details {
     display: none; /* Hidden by default */

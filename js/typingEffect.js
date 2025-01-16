@@ -145,5 +145,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+//Text for employment
+document.addEventListener("DOMContentLoaded", () => {
+    const typingElement = document.getElementById("Emp-text");
+    const smallerTypingElement = document.getElementById("Emp-subtext");
+
+    const mainText = "Experiences and Responsibilities";
+    const subText = `This is a list of some positions I've held over the past two years. Please visit my <a href="https://www.linkedin.com/in/sunnywick" target="_blank" style="color: white; text-decoration: underline;">LinkedIn</a> for a more comprehensive look.`;
+
+    let mainCharIndex = 0;
+
+    function typeMainTextEffect() {
+        if (mainCharIndex < mainText.length) {
+            typingElement.innerHTML += mainText.charAt(mainCharIndex);
+            mainCharIndex++;
+            setTimeout(typeMainTextEffect, 100); // Adjust typing speed
+        } else {
+            // Once the main text is done, directly add the subtext with innerHTML
+            smallerTypingElement.innerHTML = subText;
+        }
+    }
+
+    // Start the typing effect for the main text
+    typeMainTextEffect();
+});
+
+
+
+
+
 
 
